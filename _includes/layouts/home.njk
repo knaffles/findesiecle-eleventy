@@ -2,5 +2,39 @@
 layout: layouts/base.njk
 section: home
 ---
+<section class="home-hero">
+  <div class="row">
+    <div class="home-hero-container">
+      <div class="home-image">
+        <img src="/static/img/fds.png" />
+      </div>
+      <div class="home-text">
+        <h1>{{ heading }}</h1>
+        {{ layoutContent | safe }}
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <h2 id="tabs-title">Available for Purchase</h2>
 
-{{ layoutContent | safe }}
+    <ul data-tabs class="tabs">
+      <li><a data-tabby-default href="#ceramics">Ceramics</a></li>
+      <li><a href="#paintings">Paintings</a></li>
+    </ul>
+
+    <div id="ceramics">
+      <div id="ceramics-collection"></div>
+    </div>
+    <div id="paintings">
+      <div id="paintings-collection"></div>
+    </div>
+
+    <script>
+      var tabs = new Tabby('[data-tabs]');
+    </script>
+       
+  </div>
+</section>
+<script src="/_includes/assets/js/collections.js"></script>

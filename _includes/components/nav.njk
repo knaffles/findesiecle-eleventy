@@ -1,3 +1,4 @@
+{#
 <nav>
   {% set navPages = collections.all | eleventyNavigation %}
   <ul>
@@ -6,5 +7,16 @@
       <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
     </li>
   {%- endfor %}
+  </ul>
+</nav>
+#}
+<nav id="main-nav">
+  <ul>
+    <li>
+      <a href="/">home</a>
+    </li>
+    <li>
+      <a href="/contact">contact</a>
+    </li>
   </ul>
 </nav>

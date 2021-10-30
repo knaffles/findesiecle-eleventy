@@ -5,12 +5,28 @@
 
 	<body>
 
+		{#
 		<header>
 			<em>
 				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
 			</em>
 			{% include "components/nav.njk" %}
 		</header>
+		#}
+		
+		<header class="header">
+			<div class="row">
+				<div class="header-container">
+					<div class="header-title">
+						<a href="/">
+							Fin-De<span class="bumpit-baby">-</span>Siècle
+						</a>
+					</div>
+					{% include "components/nav.njk" %}
+				</div>
+			</div>
+		</header>
+
 
 		<main>
 			{{ layoutContent | safe }}

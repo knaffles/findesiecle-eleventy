@@ -2,13 +2,21 @@
   <meta charset="utf-8">
   <link rel="dns-prefetch" href="https://identity.netlify.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ renderData.title or title or metadata.title }}</title>
-  <meta name="description" content="{{ metaDescription or renderData.metaDescription or metadata.description }}">
+  {# <title>{{ renderData.title or title or metadata.title }}</title> #}
+  <title>Fin De Siècle</title>
+  {# <meta name="description" content="{{ metaDescription or renderData.metaDescription or metadata.description }}"> #}
+  <meta name="description" content="Based north of Chicago, Fin-De-Siècle specializes in late-19th and early-20th century decorative arts." />
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+  <script src="https://sdks.shopifycdn.com/buy-button/2.1.8/buybutton.js"></script>
+  <script src="/_includes/assets/js/tabs.js"></script>
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  {#
   {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
+  #}
   {% set js %}
     {% include "assets/js/inline.js" %}
   {% endset %}
