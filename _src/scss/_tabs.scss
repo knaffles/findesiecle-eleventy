@@ -1,5 +1,5 @@
 .tabs {
-  border-bottom: 1px solid $lightgrey;
+  border-bottom: 1px solid $brown;
   display: flex;
   width: 100%;
   list-style: none;
@@ -14,14 +14,11 @@
   a {
     color: $brown;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     text-transform: uppercase;
 
-    &:first-child {
-      padding-left: 0;
-    }
-
     &[aria-selected="true"] {
+      border-bottom: 2px solid $brown;
       font-weight: bold;
     }
   }
