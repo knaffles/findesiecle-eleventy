@@ -11,11 +11,19 @@ if (window.ShopifyBuy) {
     node: document.getElementById("ceramics-collection"),
     options: {
       product: {
-        button: "View Details",
         buttonDestination: "modal",
         text: {
           button: "View Details",
         },
+        templates: {
+          button: `{{#data.selectedVariant.available}}<div class="{{data.classes.product.buttonWrapper}}" data-element="product.buttonWrapper"><button {{#data.buttonDisabled}}disabled{{/data.buttonDisabled}} class="{{data.classes.product.button}} {{data.buttonClass}}" data-element="product.button">{{data.buttonText}}</button></div>{{/data.selectedVariant.available}}
+          {{^data.selectedVariant.available}}<div class="{{data.classes.product.buttonWrapper}}" data-element="product.buttonWrapper"><button disabled class="{{data.classes.product.button}} {{data.buttonClass}}" data-element="product.button">SOLD</button></div>{{/data.selectedVariant.available}}`,
+        },
+        // events: {
+        //   afterRender: function (component) {
+        //     console.log(component.selectedVariant.available);
+        //   },
+        // },
       },
       productSet: {
         iframe: false,
@@ -27,6 +35,10 @@ if (window.ShopifyBuy) {
         contents: {
           img: false,
           imgWithCarousel: true,
+        },
+        text: {
+          button: "Buy Now",
+          outOfStock: "SOLD",
         },
         templates: {
           imgWithCarousel: `<div class="{{data.classes.product.imgWrapper}}" data-element="product.imageWrapper">
