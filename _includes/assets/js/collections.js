@@ -69,7 +69,6 @@ if (window.ShopifyBuy) {
     node: document.getElementById("paintings-collection"),
     options: {
       product: {
-        button: "View Details",
         buttonDestination: "modal",
         text: {
           button: "View Details",
@@ -85,6 +84,59 @@ if (window.ShopifyBuy) {
         contents: {
           img: false,
           imgWithCarousel: true,
+        },
+        text: {
+          button: "Buy Now",
+          outOfStock: "SOLD",
+        },
+        templates: {
+          imgWithCarousel: `<div class="{{data.classes.product.imgWrapper}}" data-element="product.imageWrapper">
+            <div class="main-image-wrapper">
+              <button type="button" class="carousel-button carousel-button--previous">
+                Left
+                <img class="carousel-button-arrow" src="//sdks.shopifycdn.com/buy-button/latest/arrow.svg" alt="Carousel Arrow"/>
+              </button>
+              <img class="{{data.classes.product.img}}" alt="{{data.currentImage.altText}}" src="{{data.currentImage.srcLarge}}" data-element="product.img" />
+              <button type="button" class="carousel-button carousel-button--next">
+                Right
+                <img class="carousel-button-arrow" src="//sdks.shopifycdn.com/buy-button/latest/arrow.svg" alt="Carousel Arrow"/>
+              </button>
+            </div>
+            <div class="{{data.classes.product.carousel}}">
+              {{#data.carouselImages}}
+              <a data-element="product.carouselitem" aria-label="{{altText}}" href="{{src}}" class="{{data.classes.product.carouselItem}} {{#isSelected}} {{data.classes.product.carouselItemSelected}} {{/isSelected}}" data-image-id="{{id}}" style="background-image: url({{carouselSrc}})"></a>
+              {{/data.carouselImages}}
+            </div>
+          </div>`,
+        },
+      },
+    },
+  });
+
+  ui.createComponent("collection", {
+    id: 413752721629,
+    node: document.getElementById("decorative-arts-collection"),
+    options: {
+      product: {
+        buttonDestination: "modal",
+        text: {
+          button: "View Details",
+        },
+      },
+      productSet: {
+        iframe: false,
+      },
+      modal: {
+        iframe: false,
+      },
+      modalProduct: {
+        contents: {
+          img: false,
+          imgWithCarousel: true,
+        },
+        text: {
+          button: "Buy Now",
+          outOfStock: "SOLD",
         },
         templates: {
           imgWithCarousel: `<div class="{{data.classes.product.imgWrapper}}" data-element="product.imageWrapper">
