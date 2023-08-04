@@ -28,6 +28,9 @@ if (window.ShopifyBuy) {
       productSet: {
         iframe: false,
       },
+      cart: {
+        popup: false,
+      },
       modal: {
         iframe: false,
       },
@@ -77,6 +80,9 @@ if (window.ShopifyBuy) {
       productSet: {
         iframe: false,
       },
+      cart: {
+        popup: false,
+      },
       modal: {
         iframe: false,
       },
@@ -125,6 +131,9 @@ if (window.ShopifyBuy) {
       },
       productSet: {
         iframe: false,
+      },
+      cart: {
+        popup: false,
       },
       modal: {
         iframe: false,
