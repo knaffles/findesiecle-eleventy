@@ -291,9 +291,9 @@ section .row {
   hr {
     clear: both;
     border: none;
-    padding-top: 5rem;
-    border-bottom: 1px solid lightgrey;
-    margin: 0 0 5rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid $brown;
+    margin: 0 0 2rem;
   }
 }
 
@@ -730,6 +730,12 @@ section .row {
 
 #ceramics-collection,
 #paintings-collection,
-#decorative-arts-collection {
+#decorative-arts-collection,
+#pennsylvania-collection {
   min-height: 400px;
+}
+
+.shopify-buy__product__variant-img,
+.shopify-buy__product__title {
+  cursor: pointer;
 }
