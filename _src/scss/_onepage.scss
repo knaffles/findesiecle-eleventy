@@ -539,6 +539,18 @@ section .row {
   z-index: 1;
 }
 
+.high-res {
+  margin-top: 0.5rem;
+  text-align: right;
+
+  a {
+    color: $brown;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-decoration: underline;
+  }
+}
+
 // Two columns
 //------------------------------------------------------------------------------
 .two-col {
@@ -735,7 +747,9 @@ section .row {
   min-height: 400px;
 }
 
-.shopify-buy__product__variant-img,
-.shopify-buy__product__title {
-  cursor: pointer;
+.shopify-buy__collection {
+  .shopify-buy__product__variant-img,
+  .shopify-buy__product__title {
+    cursor: pointer;
+  }
 }
