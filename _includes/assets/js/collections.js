@@ -78,6 +78,7 @@ if (window.ShopifyBuy) {
   embedCollection(421302796509, "pennsylvania-collection");
   embedCollection(421305647325, "new-york-collection");
   embedCollection(413752721629, "decorative-arts-collection");
+  embedCollection(424609775837, "wpa-collection");
 
   const clickedImage = (target) => {
     if (
